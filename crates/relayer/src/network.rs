@@ -1,0 +1,5 @@
+//! HTTP listener stub. Real handlers ship in a follow-up release.
+
+pub fn serve(addr: &str) {
+    println!("relayer would listen on {addr} (stub)");
+}

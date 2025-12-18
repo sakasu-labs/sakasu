@@ -1,0 +1,16 @@
+//! Off-chain mirror of the on-chain stake table.
+
+#[derive(Clone, Debug, PartialEq, Eq)]
+pub struct StakeEntry {
+    pub operator: [u8; 32],
+    pub amount_lamports: u64,
+    pub registered_slot: u64,
+}
+
+pub fn min_stake_lamports() -> u64 {
+    10_000_000_000 // 10,000 $SAKA at 6 decimals
+}
+
+pub fn is_eligible(entry: &StakeEntry) -> bool {
+    entry.amount_lamports >= min_stake_lamports()
+}
