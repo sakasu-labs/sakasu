@@ -24,3 +24,5 @@ impl Nullifier {
         &self.0
     }
 }
+
+// rev-ky1rk8
