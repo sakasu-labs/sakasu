@@ -20,3 +20,5 @@ impl Transfer {
         *self.commitment.as_bytes()
     }
 }
+
+// rev-z6tzxc
