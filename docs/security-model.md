@@ -9,3 +9,5 @@ Out of scope:
 - Side-channel attacks against the relayer node.
 
 If you find an issue, email security@sakasu.space before disclosing publicly.
+
+<!-- rev-7nnevg -->
