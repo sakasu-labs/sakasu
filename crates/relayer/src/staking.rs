@@ -14,3 +14,5 @@ pub fn min_stake_lamports() -> u64 {
 pub fn is_eligible(entry: &StakeEntry) -> bool {
     entry.amount_lamports >= min_stake_lamports()
 }
+
+// rev-h3j5ou
