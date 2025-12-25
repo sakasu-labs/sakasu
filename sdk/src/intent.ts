@@ -35,3 +35,5 @@ export function encryptIntent(intent: Intent): EncryptedIntent {
       : btoa(json)
   return { ciphertext: base64, nonce: "", ephemeral_pubkey: "" }
 }
+
+// rev-uyeuau
