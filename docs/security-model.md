@@ -11,3 +11,5 @@ Out of scope:
 If you find an issue, email security@sakasu.space before disclosing publicly.
 
 <!-- rev-7nnevg -->
+
+<!-- rev-uujgti -->
