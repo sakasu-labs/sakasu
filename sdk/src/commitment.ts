@@ -38,3 +38,5 @@ export function generateViewKey(): Uint8Array {
   crypto.getRandomValues(k)
   return k
 }
+
+// rev-u3fylt
