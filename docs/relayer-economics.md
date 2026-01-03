@@ -8,3 +8,5 @@ pays a flat 0.30% fee in the source-chain asset:
 
 Slashing applies on missed deadlines, invalid proofs, or excessive drop
 rates within a 24-hour window.
+
+<!-- rev-yex7uf -->
