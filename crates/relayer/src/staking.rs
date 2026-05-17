@@ -8,7 +8,7 @@ pub struct StakeEntry {
 }
 
 pub fn min_stake_lamports() -> u64 {
-    10_000_000_000 // 10,000 $SAKA at 6 decimals
+    10_000_000_000 // 10,000 $SKS at 6 decimals
 }
 
 pub fn is_eligible(entry: &StakeEntry) -> bool {

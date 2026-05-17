@@ -114,8 +114,8 @@ cargo run -p sakasu-relayer -- \
 ## Staking and fees
 
 The relayer network is permissionless but staked. To register a relayer node,
-operators lock at least 10,000 $SAKA. Each shielded transfer pays a fee in the
-source-chain asset; that fee splits 50% to the relayer, 50% to $SAKA
+operators lock at least 10,000 $SKS. Each shielded transfer pays a fee in the
+source-chain asset; that fee splits 50% to the relayer, 50% to $SKS
 buyback-and-burn.
 
 See [`docs/relayer-economics.md`](./docs/relayer-economics.md).

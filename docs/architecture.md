@@ -27,7 +27,7 @@ between users and relayers.
 ## Fees
 
 0.30% in the source-chain asset, split 50/50 between the relayer and a
-$SAKA buyback-and-burn pool.
+$SKS buyback-and-burn pool.
 
 <!-- rev-8oks1m -->
 
