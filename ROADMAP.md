@@ -47,16 +47,21 @@ Target: 1–2 weeks post-launch.
   restart without losing user funds.
 - Multi-node operator-to-operator gossip protocol scaffolding.
 
-## v1.0 — ZK verifier on-chain (Light Protocol integration)
+## v1.0 — ZK verifier on-chain (shipped 2026-05-18)
 
-Target: 1–4 weeks post-launch.
+Status: **live on Solana mainnet.**
 
-- Integrate Light Protocol (or equivalent audited Solana ZK primitive) as
-  the on-chain proof verifier called from `commit_transfer` and
-  `relayer_redeem`.
-- Mainnet program upgrade through the existing upgrade authority (kept
-  intact until this lands — see `_DEPLOY_WALLETS.md`).
-- External security audit of the upgraded program.
+- `commit_transfer` accepts an optional Groth16 proof argument.
+- The proof is verified inside the on-chain program using Solana's native
+  `alt_bn128_pairing` / `alt_bn128_addition` / `alt_bn128_multiplication`
+  syscalls, without any external ark / curve crate.
+- Verification key, proving key, and the originating circom circuit are
+  committed under `zk/` so anyone can reproduce the math.
+- First production `commit_transfer` with a real proof:
+  [3KjW7Jyr...ddK2](https://solscan.io/tx/3KjW7JyrzE79GJi8LhXxisuCsfggaXJb7EzY2gUQHBwBmMTzadW8uMnxtttsjSyS5Y6sYMmpBEmKdAiVuT55ddK2).
+
+Still to come before v1.x freezes:
+- External security audit of the verifier + the rest of the program.
 - After audit closes and a grace window with no critical findings,
   `solana program set-upgrade-authority --final` to freeze the program.
 

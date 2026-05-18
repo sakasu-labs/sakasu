@@ -78,10 +78,29 @@ anyone can replay through Solscan:
 - `relayer_redeem` — [2KFyaM7B...gV7](https://solscan.io/tx/2KFyaM7BsaURXEwibj9oAHrzYm8PGHq6PUAr438Bsijb9vMtSRPuJ3WvQdx8T4r94yT4zf6hheDS6aYUog2GyV7)
 - `unstake_relayer` — [37BsxCSj...FB3](https://solscan.io/tx/37BsxCSjwQoiX9SQtygRb5nsJFcmUFWmiWqJK3b4hhvnWSFLBrz7Dv3VsfFzFfKgAJ8S5KQvMCo1CVLy6FQUCFB3)
 
-The full reproduction script is `chain/migrations/demo_e2e_mainnet.ts` in
-the private deployment repo; the public source for the on-chain logic is
-under `crates/core/` and `programs/sakasu-vault/` and matches the deployed
-program byte-for-byte (Solana on-chain hash equals the local `.so` hash).
+### v1.0 — Groth16 verifier live on mainnet (2026-05-18)
+
+The on-chain Groth16 verifier described in `zk/circuits/commitment_proof.circom`
+is now live in the Solana mainnet program. `commit_transfer` accepts an
+optional proof argument and, when supplied, runs the BN-254 pairing check
+through Solana's native `alt_bn128_pairing` syscall before recording the
+commitment.
+
+- Program upgrade adding the verifier — [59x8dNfY...B6gpw](https://solscan.io/tx/59x8dNfYRPSBgS2XQeC72MtwBVhKffEocMHHtPLJ3pKgjcG1WDXwBhc9GPJn6u9tQ5EVT8g6bdghpBDSDfPB6gpw)
+- Program upgrade enabling relayer reactivation — [2uwk51GC...Kf4f](https://solscan.io/tx/2uwk51GCLuSff81rDuoSUWjQN9vi37Z4JKv9fyNj3h7tUpx3ZBRfXmCtasF3c7R7CZnnigjkuzD2AGkRmixxKf4f)
+- First `commit_transfer` accepted with a real Groth16 proof — [3KjW7Jyr...ddK2](https://solscan.io/tx/3KjW7JyrzE79GJi8LhXxisuCsfggaXJb7EzY2gUQHBwBmMTzadW8uMnxtttsjSyS5Y6sYMmpBEmKdAiVuT55ddK2)
+
+That third transaction is the receipt that the on-chain BN-254 pairing
+check ran on a proof produced by the circom circuit in this repository.
+Anyone with `solana-cli` and the proving key shipped in `zk/build/` can
+generate a new proof and submit their own `commit_transfer` against
+program `HXXFgjuzwhNzk4EfGf6pWNE5hapV5FYN2ZRSwchcMy8p`.
+
+The full reproduction script is `chain/migrations/demo_e2e_zk_mainnet.ts`
+in the private deployment repo; the public source for the verifier
+itself is at `zk/circuits/commitment_proof.circom` and the verification
+key is committed at `zk/build/verification_key.json` (the same bytes are
+embedded in the on-chain program's `verifying_key.rs`).
 
 ## Architecture
 
