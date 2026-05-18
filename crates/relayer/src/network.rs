@@ -1,13 +1,12 @@
 //! HTTP listener for the relayer node.
 //!
 //! v0 ships three endpoints the rest of the stack actually exercises:
-//!   - `GET  /health`  — liveness probe, returns `{"ok": true}`
+//!   - `GET  /health` — liveness probe, returns `{"ok": true}`.
 //!   - `GET  /metrics` — process counters (uptime, requests served,
-//!                      intent count, last error timestamp)
-//!   - `POST /intent`  — accepts an encrypted intent envelope. v0 stores it
-//!                      in an in-memory queue and replies with the queued
-//!                      intent id. Real decryption + Solana broadcast lands
-//!                      in v0.2 (see ROADMAP.md).
+//!     intent count, last error timestamp).
+//!   - `POST /intent` — accepts an encrypted intent envelope. v0 stores it
+//!     in an in-memory queue and replies with the queued intent id. Real
+//!     decryption + Solana broadcast lands in v0.2 (see ROADMAP.md).
 //!
 //! Everything below runs on the standard library's `TcpListener` so the crate
 //! stays dependency-light. A switch to `axum` / `tokio` is tracked under v0.2.
