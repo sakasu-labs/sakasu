@@ -48,3 +48,19 @@ node test_commitment_proof.js
 
 Expected: `=== ALL CHECKS PASSED ===` and a proof generation time well
 under one second on commodity hardware.
+
+## Live mainnet verifier (v1.0, 2026-05-18)
+
+The verification key in `build/verification_key.json` is the same key
+the on-chain Solana program at
+`HXXFgjuzwhNzk4EfGf6pWNE5hapV5FYN2ZRSwchcMy8p` uses when it runs the
+BN-254 pairing check via the `alt_bn128_pairing` syscall.
+
+First production `commit_transfer` carrying a real Groth16 proof:
+[3KjW7Jyr...ddK2](https://solscan.io/tx/3KjW7JyrzE79GJi8LhXxisuCsfggaXJb7EzY2gUQHBwBmMTzadW8uMnxtttsjSyS5Y6sYMmpBEmKdAiVuT55ddK2).
+
+The transaction logs show the program invoking the BN-254 syscalls — the
+proof bytes never decode into anything readable on-chain; the verifier
+sees only the curve points and runs the pairing equation. Anyone with
+`snarkjs` can produce a fresh proof against this verification key and
+get it accepted by the same program.
