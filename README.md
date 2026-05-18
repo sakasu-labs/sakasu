@@ -25,13 +25,47 @@ CA: 8QA645xiDpsmmaqbk3aYeNumgNRiRDndBgjdoK61pump
 
 ## What it is
 
-Sakasu is a privacy layer for Solana ↔ EVM cross-chain swaps. Built around
-zk-SNARK shielded commitments, encrypted intent submission, and a staked
-relayer network, it lets users move USDC / SOL / ETH between Solana, Base,
-Ethereum and Arbitrum without leaving an on-chain trail of who they are,
-where the funds came from, or what their next move is.
+Sakasu is a privacy layer designed for Solana ↔ EVM cross-chain swaps.
+Once the full stack ships, users will move USDC / SOL / ETH between Solana,
+Base, Ethereum and Arbitrum without leaving an on-chain trail of who they
+are, where the funds came from, or what their next move is.
 
 Behind the noren, no one sees what you carry.
+
+## Status — what is actually live today
+
+This repository documents the full target architecture. Not all of it is
+operational yet. The current release is **v0**, and the boundary between
+"shipped" and "roadmap" is recorded explicitly so the codebase can be
+audited against this claim:
+
+**Live on Solana mainnet (v0):**
+
+- `sakasu-vault` Anchor program: `HXXFgjuzwhNzk4EfGf6pWNE5hapV5FYN2ZRSwchcMy8p`
+- Five on-chain instructions: `initialize_vault`, `commit_transfer`,
+  `relayer_redeem`, `register_relayer`, `unstake_relayer`
+- VaultConfig PDA initialized with fee_bps = 30 (0.30%)
+- Commitment + nullifier set enforcing single-redemption invariants
+- Staking ledger for relayer registration
+- Token-2022 compatible vault path via `anchor-spl::token_interface`
+
+**Not yet in the v0 build (roadmap — see [ROADMAP.md](./ROADMAP.md)):**
+
+- The on-chain ZK proof verifier itself. v0 enforces commitment existence
+  and nullifier freshness; the SNARK proof check ships in v1.x via Light
+  Protocol integration (target: 1–4 weeks post-launch).
+- A complete relayer P2P network. The current relayer crate ships a
+  functioning HTTP node skeleton; full peer discovery, encrypted intent
+  decryption, and slashing automation are tracked for v1.x.
+- Destination-chain verifier contracts (Base / Ethereum / Arbitrum). Ships
+  with v1.x alongside the audited Solana mainnet program upgrade.
+- X25519 + ChaCha20-Poly1305 intent encryption. v0 SDK uses a base64
+  placeholder so the rest of the stack can be exercised end-to-end. The
+  real envelope encryption lands in `@sakasu/sdk` v0.3.
+
+Every claim in this document is checkable: the mainnet program ID above
+opens on Solscan, the CI is in `.github/workflows/`, and the roadmap items
+are tracked as open issues in this repository.
 
 ## Architecture
 
@@ -146,36 +180,19 @@ MIT. See [LICENSE](./LICENSE).
 - Docs — [`docs/architecture.md`](./docs/architecture.md)
 - X / Twitter — [@sakasu_space](https://x.com/sakasu_space)
 
-<!-- rev-s4ek1y -->
 
-<!-- rev-7f5afu -->
 
-<!-- rev-3pfnd4 -->
 
-<!-- rev-qeula5 -->
 
-<!-- rev-oa2yyi -->
 
-<!-- rev-3qqne9 -->
 
-<!-- rev-7lltof -->
 
-<!-- rev-t9djbp -->
 
-<!-- rev-d0ys2u -->
 
-<!-- rev-vhvqgw -->
 
-<!-- rev-8e35tn -->
 
-<!-- rev-li1nep -->
 
-<!-- rev-azemr7 -->
 
-<!-- rev-5u2n51 -->
 
-<!-- rev-aeqihe -->
 
-<!-- rev-40j97q -->
 
-<!-- rev-pj5ihe -->

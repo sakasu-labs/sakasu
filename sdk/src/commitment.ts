@@ -39,32 +39,17 @@ export function generateViewKey(): Uint8Array {
   return k
 }
 
-// rev-u3fylt
 
-// rev-yn6im1
 
-// rev-bplm15
 
-// rev-5l49nm
 
-// rev-xzp34z
 
-// rev-8ebpqe
 
-// rev-oik18n
 
-// rev-459s3w
 
-// rev-wtps78
 
-// rev-y0noxu
 
-// rev-gs1t75
 
-// rev-i8ja4h
 
-// rev-o6k5ey
 
-// rev-t4l68m
 
-// rev-8b9622

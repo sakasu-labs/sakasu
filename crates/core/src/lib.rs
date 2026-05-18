@@ -15,26 +15,14 @@ pub use transfer::Transfer;
 pub const DOMAIN_TAG: &[u8; 16] = b"SAKASU_ZK_V0001 ";
 pub const PROTOCOL_VERSION: u32 = 2;
 
-// rev-m1vkgi
 
-// rev-5f0xix
 
-// rev-6ei8sy
 
-// rev-r8vwfu
 
-// rev-aate1u
 
-// rev-ykg8jg
 
-// rev-0e8cue
 
-// rev-ndq8oz
 
-// rev-vgu4kv
 
-// rev-0m44tp
 
-// rev-62c8f4
 
-// rev-rjthv1

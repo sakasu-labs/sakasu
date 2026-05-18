@@ -10,40 +10,21 @@ Out of scope:
 
 If you find an issue, email security@sakasu.space before disclosing publicly.
 
-<!-- rev-7nnevg -->
 
-<!-- rev-uujgti -->
 
-<!-- rev-2my892 -->
 
-<!-- rev-o7x6vu -->
 
-<!-- rev-b8t8x8 -->
 
-<!-- rev-pficbs -->
 
-<!-- rev-puxhf8 -->
 
-<!-- rev-f2doqs -->
 
-<!-- rev-h4rz4k -->
 
-<!-- rev-70hfuw -->
 
-<!-- rev-o3naau -->
 
-<!-- rev-uv0rdi -->
 
-<!-- rev-whikd9 -->
 
-<!-- rev-8itj55 -->
 
-<!-- rev-utf3dj -->
 
-<!-- rev-0oult0 -->
 
-<!-- rev-hw5gx4 -->
 
-<!-- rev-rakd1u -->
 
-<!-- rev-ikvfrl -->

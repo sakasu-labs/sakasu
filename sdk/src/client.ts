@@ -65,26 +65,14 @@ export function chainCode(c: ShieldedTransferInput["fromChain"]): number {
   }
 }
 
-// rev-9g7upw
 
-// rev-tey3nq
 
-// rev-bjrdiq
 
-// rev-tf5qh8
 
-// rev-sm5yv7
 
-// rev-m6aj0o
 
-// rev-5iibxt
 
-// rev-6ibp7s
 
-// rev-ectnpj
 
-// rev-svgls6
 
-// rev-licjbl
 
-// rev-qx8zlv

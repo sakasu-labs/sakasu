@@ -13,32 +13,17 @@ export async function listRelayers(api: string): Promise<RelayerInfo[]> {
   return res.json() as Promise<RelayerInfo[]>
 }
 
-// rev-zn1520
 
-// rev-vqg3bw
 
-// rev-b4sikg
 
-// rev-vziyss
 
-// rev-psh5b2
 
-// rev-9tg1tq
 
-// rev-wk8kdv
 
-// rev-e7nlke
 
-// rev-gsq9ib
 
-// rev-ydh50t
 
-// rev-w2r5fm
 
-// rev-u1k6u7
 
-// rev-n0i7dz
 
-// rev-awig6z
 
-// rev-agijly

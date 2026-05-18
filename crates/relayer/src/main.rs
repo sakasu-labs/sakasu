@@ -11,11 +11,11 @@ struct Args {
     solana_rpc: String,
 }
 
-fn main() {
+fn main() -> std::io::Result<()> {
     let args = Args::parse();
     println!(
         "starting sakasu-relayer  listen={}  rpc={}",
         args.listen, args.solana_rpc
     );
-    sakasu_relayer::network::serve(&args.listen);
+    sakasu_relayer::network::serve(&args.listen)
 }

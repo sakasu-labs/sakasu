@@ -15,36 +15,19 @@ pub fn is_eligible(entry: &StakeEntry) -> bool {
     entry.amount_lamports >= min_stake_lamports()
 }
 
-// rev-h3j5ou
 
-// rev-b74a3l
 
-// rev-ts09z1
 
-// rev-s6vycc
 
-// rev-8psxnl
 
-// rev-hp7az1
 
-// rev-iubbcf
 
-// rev-oq8u84
 
-// rev-vfii40
 
-// rev-6tr32s
 
-// rev-3a9epr
 
-// rev-ane0y2
 
-// rev-t0ntv9
 
-// rev-bro5vf
 
-// rev-a13mlk
 
-// rev-9x25zq
 
-// rev-lm5p1h

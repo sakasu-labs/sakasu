@@ -25,22 +25,12 @@ impl Nullifier {
     }
 }
 
-// rev-ky1rk8
 
-// rev-r28n91
 
-// rev-cm16bb
 
-// rev-kpwhwh
 
-// rev-g3hb5c
 
-// rev-w9yt26
 
-// rev-q9d3ee
 
-// rev-mtw45y
 
-// rev-brqj3g
 
-// rev-4y6esq

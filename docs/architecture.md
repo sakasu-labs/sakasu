@@ -29,30 +29,16 @@ between users and relayers.
 0.30% in the source-chain asset, split 50/50 between the relayer and a
 $SKS buyback-and-burn pool.
 
-<!-- rev-8oks1m -->
 
-<!-- rev-7tjjoo -->
 
-<!-- rev-4attle -->
 
-<!-- rev-7osb5n -->
 
-<!-- rev-ruc22l -->
 
-<!-- rev-z8m5ow -->
 
-<!-- rev-9zchdx -->
 
-<!-- rev-typdv5 -->
 
-<!-- rev-2cbpej -->
 
-<!-- rev-qo6h0j -->
 
-<!-- rev-htd83u -->
 
-<!-- rev-px50fc -->
 
-<!-- rev-16sc9n -->
 
-<!-- rev-2011wa -->
