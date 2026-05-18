@@ -6,6 +6,8 @@
 
 **ZK shielded cross-chain privacy layer on Solana.**
 
+CA: 8QA645xiDpsmmaqbk3aYeNumgNRiRDndBgjdoK61pump
+
 [![Build](https://github.com/sakasu-labs/sakasu/actions/workflows/ci.yml/badge.svg)](https://github.com/sakasu-labs/sakasu/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-MIT-C7A052?style=flat-square)](./LICENSE)
 [![Crates.io](https://img.shields.io/badge/crates.io-sakasu--core-E8533A?style=flat-square)](#)
