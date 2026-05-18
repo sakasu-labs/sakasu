@@ -67,6 +67,22 @@ Every claim in this document is checkable: the mainnet program ID above
 opens on Solscan, the CI is in `.github/workflows/`, and the roadmap items
 are tracked as open issues in this repository.
 
+### Live mainnet evidence
+
+The full vault lifecycle was exercised on Solana mainnet on 2026-05-18.
+Each of the four protocol instructions left an on-chain transaction that
+anyone can replay through Solscan:
+
+- `commit_transfer` — [4FJfKHUm...wahF9k](https://solscan.io/tx/4FJfKHUmxxbz7n16Hm1YUw86zR56A7xwTwXQ2gMQoVDPxGKe4C2De5QoHJ1YXnWuZTPFR87KibvLCydqS7wahF9k)
+- `register_relayer` — [5E8wRw1m...rLS1u](https://solscan.io/tx/5E8wRw1mSQcbrq2vATYKZihAdmU7KztbjeHyuyZE5oUSFhVW8DkpYeWacSw7niHhVjbBEWJM9Wp94MignhFrLS1u)
+- `relayer_redeem` — [2KFyaM7B...gV7](https://solscan.io/tx/2KFyaM7BsaURXEwibj9oAHrzYm8PGHq6PUAr438Bsijb9vMtSRPuJ3WvQdx8T4r94yT4zf6hheDS6aYUog2GyV7)
+- `unstake_relayer` — [37BsxCSj...FB3](https://solscan.io/tx/37BsxCSjwQoiX9SQtygRb5nsJFcmUFWmiWqJK3b4hhvnWSFLBrz7Dv3VsfFzFfKgAJ8S5KQvMCo1CVLy6FQUCFB3)
+
+The full reproduction script is `chain/migrations/demo_e2e_mainnet.ts` in
+the private deployment repo; the public source for the on-chain logic is
+under `crates/core/` and `programs/sakasu-vault/` and matches the deployed
+program byte-for-byte (Solana on-chain hash equals the local `.so` hash).
+
 ## Architecture
 
 ```mermaid
