@@ -55,15 +55,3 @@ impl MerkleTree {
         layer[0]
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

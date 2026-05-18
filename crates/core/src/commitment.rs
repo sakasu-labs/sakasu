@@ -36,16 +36,3 @@ impl Commitment {
         &self.0
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -24,13 +24,3 @@ impl Nullifier {
         &self.0
     }
 }
-
-
-
-
-
-
-
-
-
-
